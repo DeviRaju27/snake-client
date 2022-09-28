@@ -8,8 +8,9 @@ const connect = function() {
 
   conn.on("connect",() => {
   
-    conn.write("Name: Dev");
-
+    conn.write("Name:");
+    // conn.write("Move: up");
+ 
   });
 
   conn.on("data",(data) => {
@@ -22,4 +23,4 @@ const connect = function() {
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
